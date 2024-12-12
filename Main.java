@@ -6,11 +6,11 @@ public class Main {
         String input = scanner.nextLine();
         System.out.println(calc(input));
     }
-    
+
     public static String calc(String input) throws Exception {
         int result;
         String[] splitTask = input.split(" ");
-        if (splitTask.length < 2 || splitTask.length > 3) {
+        if (splitTask.length != 3) {
             throw new Exception("т.к. строка не является математической операцией");
         }
         int num1 = Integer.parseInt(splitTask[0]);
